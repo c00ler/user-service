@@ -1,0 +1,8 @@
+dependencies {
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl'
+
+    implementation("io.debezium:debezium-embedded:${debeziumVersion}") {
+        exclude group: 'org.apache.kafka', module: 'kafka-log4j-appender'
+    }
+    implementation "io.debezium:debezium-connector-postgres:${debeziumVersion}"
+}
