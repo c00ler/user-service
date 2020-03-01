@@ -18,7 +18,7 @@ public abstract class AbstractModel<ModelId> implements Identifiable<ModelId> {
         return modelId;
     }
 
-    public Set<AbstractEvent<ModelId>> events() {
+    public final Set<AbstractEvent<ModelId>> events() {
         return Set.copyOf(events);
     }
 

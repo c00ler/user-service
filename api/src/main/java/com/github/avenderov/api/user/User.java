@@ -53,7 +53,7 @@ public class User extends AbstractModel<UUID> {
             return this;
         }
         return toBuilder()
-            .email(newEmail)
+            .email(newEmail) // TODO: Generate model changed event
             .build();
     }
 
